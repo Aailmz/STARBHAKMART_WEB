@@ -129,11 +129,11 @@ $(document).ready(function () {
 			  '</div>' +
 			  '<div class="price" style="display:none;">' + itemData[key].total + '</div>' + 
 			  '<button class="delete" data-cartitem="' + key + '">' +
-			  '<img class="deleteimage" src="/images/Icons/Minus.png" alt="Delete">' +'</button>' +
+			  '<img class="deleteimage" src="images/Icons/Minus.png" alt="Delete">' +'</button>' +
 			  '<button class="plus" data-cartitem="' + key + '">' +
-			  '<img class="plusimage" src="/images/Icons/plus.png" alt="Plus">' +'</button>' +
+			  '<img class="plusimage" src="images/Icons/plus.png" alt="Plus">' +'</button>' +
 			  '<button class="trash" data-cartitem="' + key + '">' +
-			  '<img class="trashimage" src="/images/Icons/Trash.png" alt="Trash">' +'</button>' +
+			  '<img class="trashimage" src="images/Icons/Trash.png" alt="Trash">' +'</button>' +
 			  '</div>' +
 			'</div>';
 	  
