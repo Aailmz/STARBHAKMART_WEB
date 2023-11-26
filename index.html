@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>STARBHAK MART - Mirza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+		<div>
+      <nav class="navbar-custom">
+        <h1 style="color: white; font-size: 100; font-weight: 600; margin-left: 1%;">Starbhak Mart</h1>
+      </nav>
+    </div>
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="sidebar">
+        <center>
+          <div class="takeaway">
+            <div class="btn-group" style="width: 100%;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;">
+                Take Away
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mirza Zubari Djunaid</a>
+              </div>
+          </div>
+            <div class="Mangjay">
+              <img src="images/Icons/Profile.png" style="display: inline-block; width: 30px; height: 30px;" alt="">
+              <p class="mangtext">Mirza Zubari Djunaid</p>
+            </div>
+          </div>    
+          <div id="overflowbar" class="overflow-auto p-3 bg-light" style="width: 98%; height: 580px; color: black; outline: 1px solid #95999c;">
+            </div>
+            <div class="discount">
+              <p class="discounttext">Discount:</p>
+              <p class="rpdiscount">Rp</p>
+              <p id="discount">0</p>
+            </div>
+            <div class="tax">
+              <p class="taxtext">Tax:</p>
+              <p class="rptax">Rp</p>
+              <p id="tax">0</p>
+            </div>
+            <div class="total">
+              <p class="totaltext">Total Amount:</p>
+              <p class="rptotal">Rp</p>
+              <p id="total">0</p>
+            </div>
+        </center>
+
+    	</nav>
+
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="itemlist">
+          <p style="font-size: larger; font-weight: bold; color: black; margin-left: 1%; display: inline-block;">Item List</p>
+          <img src="images/Icons/Search.png" style="width: 20px; height: 20px; display: inline-block; margin-left: 85%;" alt="">
+          <img src="images/Icons/Dot.png" style="width: 20px; height: 20px; display: inline-block; margin-left:1%;" alt="">
+          <img src="images/Icons/Data.png" style="width: 20px; height: 20px; display: inline-block; margin-left:1%" alt="">
+        </div>
+        <div class="list">
+
+          <div class="row" id="row1">
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="35000" data-cartitem="cartitem1">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/EggSandwich.png" class="card-img-top" style="height: 10%;">
+                  <div class="card-body">
+                    <h5 class="card-title">Egg Sandwich</h5>
+                    <p class="card-text">Rp35.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="45000" data-cartitem="cartitem2">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/ChickenHam.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Ham (Chicken)</h5>
+                    <p class="card-text">Rp45.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="40000" data-cartitem="cartitem3">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/HamCheese.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Ham Cheese</h5>
+                    <p class="card-text">Rp40.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="30000" data-cartitem="cartitem4">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/JuniorBurger.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Junior Veg Burger</h5>
+                    <p class="card-text">Rp30.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="25000" data-cartitem="cartitem5">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/MasalaCola.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Masala Cola</h5>
+                    <p class="card-text">Rp25.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="37000" data-cartitem="cartitem6">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/MuttonBurger.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mutton Burger</h5>
+                    <p class="card-text">Rp37.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row" id="row2">
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="22000" data-cartitem="cartitem7">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/FishBurger.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Fish Burger</h5>
+                      <p class="card-text">Rp22.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="20000" data-cartitem="cartitem8">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/HamBurger.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ham Burger</h5>
+                      <p class="card-text">Rp20.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="15000" data-cartitem="cartitem9">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/LemonMasala.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ice Lemon Masala</h5>
+                      <p class="card-text">Rp15.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="18000" data-cartitem="cartitem10">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/LassiSalted.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Lassi Salted</h5>
+                      <p class="card-text">Rp18.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="17000" data-cartitem="cartitem11">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/MintLemonade.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Mint Lemonade</h5>
+                      <p class="card-text">Rp17.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="item" style="cursor: pointer;" data-price="27000" data-cartitem="cartitem12">
+                  <div class="card" style="width: 12rem;">
+                    <img src="images/KebabBurger.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kebab Burger</h5>
+                      <p class="card-text">Rp27.000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="row" id="row3">
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="17000" data-cartitem="cartitem13">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/AppleLemonade.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Green Apple</h5>
+                    <p class="card-text">Rp17.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="16000" data-cartitem="cartitem14">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/HamCheese.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Ham Cheese</h5>
+                    <p class="card-text">Rp16.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="19000" data-cartitem="cartitem15">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/JuniorBurger.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Burger</h5>
+                    <p class="card-text">Rp19.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="15000" data-cartitem="cartitem16">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/LassiSweet.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Lassi Sweet</h5>
+                    <p class="card-text">Rp15.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="35000" data-cartitem="cartitem17">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/MushroomCheese.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mushroom Cheese</h5>
+                    <p class="card-text">Rp35.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="item" style="cursor: pointer;" data-price="35000" data-cartitem="cartitem18">
+                <div class="card" style="width: 12rem;">
+                  <img src="images/KingBurger.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">King Burger</h5>
+                    <p class="card-text">Rp35.000</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+		</div>
+
+    <div>
+      <nav id="footer">
+        <div class="print">
+          <button class="payment">
+            PAYMENT
+          </button>
+        </div>
+        <div class="ready">
+          <h1 style="color: white; font-size: 100%; margin-left: 1%; margin-top: 0.1%;">Ready</h1>
+        </div>
+      </nav>
+    </div>
+
+    <!--CART ITEM-->
+    <div class="cartitem cartitem1" id="cartitem1" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem1">0</div>
+      <div class="price" data-cartitem="cartitem1">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem2" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem2">0</div>
+      <div class="price" data-cartitem="cartitem2">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem3" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem3">0</div>
+      <div class="price" data-cartitem="cartitem3">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem4" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem4">0</div>
+      <div class="price" data-cartitem="cartitem4">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem5" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem5">0</div>
+      <div class="price" data-cartitem="cartitem5">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem6" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem6">0</div>
+      <div class="price" data-cartitem="cartitem6">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem7" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem7">0</div>
+      <div class="price" data-cartitem="cartitem7">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem8" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem8">0</div>
+      <div class="price" data-cartitem="cartitem8">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem9" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem9">0</div>
+      <div class="price" data-cartitem="cartitem9">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem10" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem10">0</div>
+      <div class="price" data-cartitem="cartitem10">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem11 style="display: none;">
+      <div class="click-count" data-cartitem="cartitem11">0</div>
+      <div class="price" data-cartitem="cartitem11">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem12" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem12">0</div>
+      <div class="price" data-cartitem="cartitem12">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem13" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem13">0</div>
+      <div class="price" data-cartitem="cartitem13">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem14" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem14">0</div>
+      <div class="price" data-cartitem="cartitem14">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem15" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem15">0</div>
+      <div class="price" data-cartitem="cartitem15">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem16" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem16">0</div>
+      <div class="price" data-cartitem="cartitem16">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem17" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem17">0</div>
+      <div class="price" data-cartitem="cartitem17">0</div>
+    </div>
+    <div class="cartitem cartitem2" id="cartitem18" style="display: none;">
+      <div class="click-count" data-cartitem="cartitem18">0</div>
+      <div class="price" data-cartitem="cartitem18">0</div>
+    </div>
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
