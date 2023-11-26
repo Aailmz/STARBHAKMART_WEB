@@ -9,7 +9,7 @@ NOTE:
   26/11/23
 -----
 
-STARBHAK MART is an E-Commerce platform that is used to purchase mvarious types of goods digitally. This project contains the main display and function that can be run on the STARBHAK MART WEB.
+STARBHAK MART is an E-Commerce platform that is used to purchase various types of goods digitally. This project contains the main display and function that can be run on the STARBHAK MART WEB.
 
 This STARBHAK MART project is an individual Software Engineering Major student project for 2023 Final Assessment in Taruna Bhakti Vocational School.
 
