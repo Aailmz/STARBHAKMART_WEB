@@ -184,7 +184,11 @@ p {
   width: 10%;
   height: 100%;
   margin-left: 89%;
-  background-color: #007bff;
+  background-color: var(--green);
+  color: white;
+}
+.payment:hover {
+  background-color: lightgreen;
 }
 
 .cartitem {
@@ -264,7 +268,65 @@ p {
   height: 30px;
   width: 30px;
 }
-/* ENDING PRIBADI */
+.dropbtn {
+  background-color: #007bff;
+  width: 100%;
+  height: 1%;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative; 
+}
+
+.dropbtn::after {
+  content: '\25BC'; 
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+#searchInput{
+  margin-left: 68%;
+}
+#searchButton{
+  border: 0px;
+  background-color: white;
+}
+
+
+
+
 
 abbr[title],
 abbr[data-original-title] {
@@ -3981,6 +4043,9 @@ input[type="button"].btn-block {
   .card > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
+.card:hover{
+  background-color: lightblue;
+}
 
 .card-body {
   -webkit-box-flex: 1;
