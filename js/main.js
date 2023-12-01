@@ -176,4 +176,96 @@ $(document).ready(function () {
 	}
 
 
-});
+
+	$(document).ready(function() {
+		var dropdownButton = $("#dropdownButton");
+		var dropdownContent = $("#dropdownContent");
+  
+		dropdownContent.on("click", "a", function(e) {
+		  dropdownButton.text($(this).text());
+		});
+	  });
+  
+	  var selectedOption = ''; 
+  
+	  function selectOption(option) {
+		selectedOption = option;
+		$('#dropdownButton').text(option); 
+	  }
+
+	$('#printButton').on('click', function () {
+        printCart();
+    });
+
+    function printCart() {
+        var printContent = '';
+
+		printContent += '<h2>Selected Option: ' + selectedOption + '</h2>';
+
+        for (var key in itemData) {
+            var formattedTotal = format_uang(itemData[key].total);
+
+            printContent += '<div class="cartitem ' + key + '">' +
+                '<div class="cart-title">' + itemData[key].title +
+                '<div class="rp">Rp</div>' +
+                '<div class="priceshow">' + formattedTotal + '</div>' + '</div>' +
+                '<div class="unit">Unit Price: ' +
+                '<div class="cart-text">' + itemData[key].text + '</div>' +
+                '<div class="quantity">Quantity: </div>' +
+                '<div class="click-count">' + itemData[key].clickCount + '</div>' +
+                '</div>' +
+                '<div class="price" style="display:none;">' + itemData[key].total + '</div>' +
+                '</div>' +
+                '</div>';
+        }
+
+        var totalCount = getTotal('.click-count');
+        var totalPrice = getTotal('.price');
+        var formattedTotalPrice = format_uang(totalPrice);
+
+        printContent += '<div class="cartitem overall">' +
+            '<div class="click-count">Total Count: ' + totalCount + '</div>' +
+            '<div class="price">Overall Price: ' + formattedTotalPrice + '</div>' +
+            '</div>';
+
+        var discount = 0;
+        var tax = totalPrice * 0.1;
+        var formattedTax = format_uang(tax);
+        var total = totalPrice + tax;
+        var formattedTotal = format_uang(total);
+
+        printContent += '<div class="cartitem">' +
+            '<div id="discount">Discount: ' + format_uang(discount) + '</div>' +
+            '<div id="tax">Tax: ' + formattedTax + '</div>' +
+            '<div id="total">Total: ' + formattedTotal + '</div>' +
+            '</div>';
+
+        var printWindow = window.open('', '_blank');
+        printWindow.document.write('<html><head><title>Struk Pembelian</title></head><body>');
+        printWindow.document.write('<h1>Struk Pembelian</h1>');
+        printWindow.document.write(printContent);
+        printWindow.document.write('</body></html>');
+
+        printWindow.setTimeout(function () {
+            printWindow.print();
+            printWindow.close();
+        }, 500);
+    }
+
+    $('#searchButton').on('click', function() {
+      searchByTitle();
+    });
+  });
+
+  function searchByTitle() {
+    var searchInput = $('#searchInput').val().toLowerCase();
+    $('.card').each(function() {
+      var title = $(this).find('.card-title').text().toLowerCase();
+
+      if (title.includes(searchInput)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }

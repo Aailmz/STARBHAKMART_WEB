@@ -25,14 +25,14 @@
 			<nav id="sidebar" class="sidebar">
         <center>
           <div class="takeaway">
-            <div class="btn-group" style="width: 100%;">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;">
-                Take Away
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Mirza Zubari Djunaid</a>
+            <div class="dropdown">
+              <button class="dropbtn" id="dropdownButton">Service Method</button>
+              <div class="dropdown-content" id="dropdownContent">
+                <a href="#" onclick="selectOption('Option 1')">Dine In</a>
+                <a href="#" onclick="selectOption('Option 2')">Take Away</a>
+                <a href="#" onclick="selectOption('Option 3')">Thrown Away</a>
               </div>
-          </div>
+            </div>
             <div class="Mangjay">
               <img src="images/Icons/Profile.png" style="display: inline-block; width: 30px; height: 30px;" alt="">
               <p class="mangtext">Mirza Zubari Djunaid</p>
@@ -62,10 +62,12 @@
       <div id="content" class="p-4 p-md-5 pt-5">
         <div class="itemlist">
           <p style="font-size: larger; font-weight: bold; color: black; margin-left: 1%; display: inline-block;">Item List</p>
-          <img src="images/Icons/Search.png" style="width: 20px; height: 20px; display: inline-block; margin-left: 85%;" alt="">
+          <input type="text" id="searchInput" placeholder="Search Item">
+          <button id="searchButton"><img src="images/Icons/Search.png" style="width: 20px; height: 20px; display: inline-block;"></button>
           <img src="images/Icons/Dot.png" style="width: 20px; height: 20px; display: inline-block; margin-left:1%;" alt="">
           <img src="images/Icons/Data.png" style="width: 20px; height: 20px; display: inline-block; margin-left:1%" alt="">
         </div>
+        <div class="row" id="searchResult"></div>
         <div class="list">
 
           <div class="row" id="row1">
@@ -300,8 +302,8 @@
     <div>
       <nav id="footer">
         <div class="print">
-          <button class="payment">
-            PAYMENT
+          <button class="payment" id="printButton">
+            PAY NOW!
           </button>
         </div>
         <div class="ready">
